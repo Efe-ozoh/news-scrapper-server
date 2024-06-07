@@ -1,13 +1,24 @@
 const express = require ('express');
 const axios = require ('axios');
 const cheerio = require ('cheerio');
-const bodyParser = require ('body-parser')
+const bodyParser = require ('body-parser');
+const cors = require('cors');
 
 
 const PORT = process.env.PORT || 3000;
 
 // use express
 const app = express();
+
+
+// including cors
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
+
 
 // including bodyParser
 app.use(bodyParser.json());
