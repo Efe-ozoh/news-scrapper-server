@@ -13,7 +13,7 @@ const app = express();
 
 // including cors
 const corsOptions ={
-    origin: "https://news-scrapper-frontend-2.onrender.com",
+    origin: "http://localhost:3000/",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
